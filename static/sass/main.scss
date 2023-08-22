@@ -1,0 +1,18 @@
+// custom variables
+
+// import the functions & variables
+@import '../../node_modules/bootstrap/scss/_functions';
+@import '../../node_modules/bootstrap/scss/_variables';
+
+$custom-spacers: (
+  6: $spacer * 5,
+  7: $spacer * 7.5,
+  8: $spacer * 10,
+  9: $spacer * 12.5,
+  10: $spacer * 15,
+);
+
+$spacers: map-merge($custom-spacers, $spacers);
+
+// import bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap'
