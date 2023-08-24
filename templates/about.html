@@ -1,62 +1,171 @@
 <!doctype html>
-  <html>
+  <html lang="en">
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>About TA</title>
       <link href="static/style.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
       <style>
-        
+        #about-container {
+          max-width: 1400px;
+        }
+
+        .about-icon {
+          font-size: 80px;
+          margin-bottom: 20px;
+        }
+    
+        #bg {
+          position: absolute;
+          background-position: right 10px top 10px;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .tag {
+          opacity: 0;
+          transform: translate(0, 10vh);
+          transition: all 1s;
+        }
+
+        .tag.visible {
+          opacity: 1;
+          transform: translate(0, 0);
+        }
       </style>
     </head>
     <body>
    <!-- Navbar -->
     {% include 'nav.html' %}
-      <div class="container" style="padding-top: 100px"></div>
-      <div class="container-md container-fluid mt-2">
-        <h1 class="text-center" style="font-size: 5rem">Musik itu Penting!</h1>
-        <div class="row mb-5">
-          <div class="col-3">
-            <i class="fa-solid fa-masks-theater"></i>
-          </div>
-          <div class="col-3">
+      <div class="container-fluid">
+        <!-- Background -->
+        <!-- <img id="bg" alt="gamelan" src="/static/img/batik.jpg"> -->
+        <div class="container position-relative mt-2" id="about-container" style="padding-top: 56px">
+          
+          <!-- Musik itu Penting! -->
+          
+          <h1 class="text-center mb-6 pt-5" style="font-size: 5rem">Musik itu Penting!</h1>
+
+          <!-- Musik itu penting icons -->
+          
+          <div class="row mx-5 text-center">
+
+            <div class="card col-3 mx-3" style="width: 18rem;">
+              <img src="static/img/sindhen.jpeg" class="card-img-top" alt="Sindhen">
+              <div class="card-body">
+                <p class="card-text">Bentuk ekspresi dan komunikasi.</p>
+              </div>
+            </div>
+
+            <div class="card col-3 mx-3" style="width: 18rem;">
+              <img src="static/img/sindhen.jpeg" class="card-img-top" alt="Sindhen">
+              <div class="card-body">
+                <p class="card-text">Memberi efek positif bagi pengembangan dan kesejahteraan seseorang.</p>
+              </div>
+            </div>
+
+            <div class="card col-3 mx-3" style="width: 18rem;">
+              <img src="static/img/sindhen.jpeg" class="card-img-top" alt="Sindhen">
+              <div class="card-body">
+                <p class="card-text">Salah satu media pengenalan budaya Indonesia kepada warga negara asing.</p>
+              </div>
+            </div>
+
+            <div class="card col-3 mx-3" style="width: 18rem;">
+              <img src="static/img/sindhen.jpeg" class="card-img-top" alt="Sindhen">
+              <div class="card-body">
+                <p class="card-text">Salah satu media pelestarian dan pengajaran budaya Indonesia kepada pemuda Indonesia.</p>
+              </div>
+            </div>
             
-          </div>
-          <div class="col-3">
+            <!-- <div class="col-3">
+              <i class="fa-solid fa-masks-theater about-icon"></i>
+              <p>Bentuk ekspresi dan komunikasi</p>
+            </div>
             
-          </div>
-          <div class="col-3">
+            <div class="col-3">
+              <i class="fa-solid fa-masks-theater about-icon"></i>
+              <p>Memberi efek positif bagi pengembangan dan kesejahteraan seseorang</p>
+            </div>
             
+            <div class="col-3">
+              <i class="fa-solid fa-masks-theater about-icon"></i>
+              <p>Salah satu media pengenalan budaya Indonesia kepada warga negara asing</p>
+            </div>
+            
+            <div class="col-3">
+              <i class="fa-solid fa-masks-theater about-icon"></i>
+              <p>Salah satu media pelestarian dan pengajaran budaya Indonesia kepada pemuda Indonesia</p>
+            </div> -->
           </div>
+          <div class="row mt-10 mb-7 tag">
+            <div class="col-7 align-self-center">
+              <h1>Sayangnya...</h1>
+              <h4>Minat terhadap budaya Indonesia menurun</h4>
+              <p>Hal ini dapat berpengaruh kepada pelestarian dan pengembangan budaya Indonesia</p>
+            </div>
+            <div class="col-5">
+              <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
+            </div>
+          </div>
+
+          
+          <div class="container-fluid tag">
+            <h1 class="text-center pt-7" style="font-size: 5rem">Budaya Indonesia harus Dijaga</h1>
+            <h2 class="text-center">Budaya Indonesia harus dijaga sebagai...</h2>
+            
+            <div class="d-flex pt-3 mb-7">
+              <div class="p-2 flex-fill text-bg-dark text-center">
+                <img src="static/img/gamelan.jpg" alt="gamelan" class="img-fluid" style="max-height:320px">
+                <p class="lead">Salah satu Identitas Negara Indonesia</p>
+              </div>
+              <div class="p-2 flex-fill text-center">
+                <img src="static/img/gamelan.jpg" alt="gamelan" class="img-fluid" style="max-height:320px">
+                <p class="lead">Bentuk pemulihan perekonomian negara</p>  
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row mt-10 mb-9">
+            <div class="col-5">
+              <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
+            </div>
+
+            
+            
+            <div class="col-7 align-self-center">
+              
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+          </div> -->
+          
+          <!-- <div class="border-bottom row" >
+            <div class="col-7">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="col-5">
+              <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
+            </div>
+          </div> -->
+          
         </div>
-        <div class="border-bottom row">
-          <div class="col-7">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-          <div class="col-5">
-            <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
-          </div>
-        </div>
-        
-        <div class="border-bottom row">
-          <div class="col-5">
-            <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
-          </div>
-          <div class="col-7">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-        </div>
-        
-        <div class="border-bottom row" >
-          <div class="col-7">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-          </div>
-          <div class="col-5">
-            <img src="static/img/gamelan.jpg" class="img-fluid" style="max-height:320px;border-radius:4px;">
-          </div>
-        </div>
-        
       </div>
       <script src="https://kit.fontawesome.com/6b351aabda.js" crossorigin="anonymous"></script>
+      <script>
+        $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+        var tags = $(".tag");
+      
+        for (var i = 0; i < tags.length; i++) {
+          var tag = tags[i];
+          if ($(tag).position().top < 0.8*pageBottom) {
+            $(tag).addClass("visible");
+          } else {
+            $(tag).removeClass("visible");
+          }
+        }
+      });
+      </script>
     </body>
   </html>

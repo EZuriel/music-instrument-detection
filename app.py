@@ -4,13 +4,17 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
+def record():
   return render_template('main.html')
 
 
-@app.route('/about_TA')
+@app.route('/about-TA')
 def about():
   return render_template('about.html')
+
+@app.route('/model-desc')
+def modelDesc():
+  return render_template('model-desc.html')
 
 
 # @app.route('/upload_static_file', methods=['POST'])
